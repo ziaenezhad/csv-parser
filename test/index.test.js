@@ -1,4 +1,4 @@
-import CSV from './index';
+import CSV from '../src/index';
 
 const data = `Username; Identifier;First name;Last name
 booker12;9012;Rachel;Booker
@@ -9,7 +9,6 @@ smith79;5079;Jamie;Smith
 `;
 test('CSV to Array', function() {
     const csv = new CSV(data, ';');
-    const array = csv.toArray();
     expect(csv.toArray()).toEqual([
         ['Username', ' Identifier', 'First name', 'Last name'],
         ['booker12', '9012', 'Rachel', 'Booker'],
